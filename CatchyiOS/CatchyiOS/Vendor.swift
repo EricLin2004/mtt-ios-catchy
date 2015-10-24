@@ -14,9 +14,7 @@ struct Vendor {
     var starsRequired: Int?
     var starsDates = [String]()
     var rewards = [Reward]()
-    
-    
-    
+        
     mutating func updateWithDictionary(dict: [String: AnyObject]) {
         
         if let name = dict["name"] as? String {
