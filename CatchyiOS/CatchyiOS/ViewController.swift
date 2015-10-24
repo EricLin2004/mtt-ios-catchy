@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         
         API.getVendors() {
             vendors in
-            print(vendors)
+            print("vendors \(vendors.count)")
         }
     }
 

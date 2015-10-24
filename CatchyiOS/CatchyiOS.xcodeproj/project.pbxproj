@@ -15,6 +15,7 @@
 		5E1E73A81BDC21B400B0B247 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E1E73A61BDC21B400B0B247 /* LaunchScreen.storyboard */; };
 		5E1E73B01BDC22DC00B0B247 /* CatchyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1E73AF1BDC22DC00B0B247 /* CatchyAPI.swift */; };
 		5E6631D61BDC26FB0005A0AF /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6631D51BDC26FB0005A0AF /* Vendor.swift */; };
+		5EFE6BE71BDC33D80043E676 /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFE6BE61BDC33D80043E676 /* Reward.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		5E1E73A91BDC21B400B0B247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E1E73AF1BDC22DC00B0B247 /* CatchyAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatchyAPI.swift; sourceTree = "<group>"; };
 		5E6631D51BDC26FB0005A0AF /* Vendor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vendor.swift; sourceTree = "<group>"; };
+		5EFE6BE61BDC33D80043E676 /* Reward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
 		7FF4E6CFFC9F812F106427C3 /* Pods-CatchyiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatchyiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatchyiOS/Pods-CatchyiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		BC16D7C70ACF6C95D7BC5324 /* Pods-CatchyiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatchyiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatchyiOS/Pods-CatchyiOS.release.xcconfig"; sourceTree = "<group>"; };
 		DA31D433C8471A99DAA7E871 /* Pods_CatchyiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatchyiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				5E6631D51BDC26FB0005A0AF /* Vendor.swift */,
+				5EFE6BE61BDC33D80043E676 /* Reward.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				5E6631D61BDC26FB0005A0AF /* Vendor.swift in Sources */,
 				5E1E739E1BDC21B400B0B247 /* AppDelegate.swift in Sources */,
 				5E1E73B01BDC22DC00B0B247 /* CatchyAPI.swift in Sources */,
+				5EFE6BE71BDC33D80043E676 /* Reward.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,20 +12,27 @@ import Alamofire
 
 struct CatchyAPI {
     
+    let headers = [ "x-api-token": "BM6vKWXbCqmoQKn9TPqK" ]
+    
     //TODO: completion block that takes vendors
     func getVendors(completion: ([Vendor]) -> Void) {
         
-        Alamofire.request(.GET, "http://httpbin.org/get", parameters: ["foo": "bar"])
+        Alamofire.request(.GET, "https://catchy.herokuapp.com/v1/users/fh123", headers: headers)
             .responseJSON { response in
-                print(response.response) // URL response
-                print(response.data)     // server data
-                print(response.result)   // result of response serialization
+
+                var vendors = [Vendor]()
                 
                 if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
+                    if let vendorsArray = JSON["vendors"] as? [[String: AnyObject]] {
+                        for vendorDict in vendorsArray {
+                            var vendor = Vendor()
+                            vendor.updateWithDictionary(vendorDict)
+                            vendors.append(vendor)
+                        }
+                    }
                 }
-                // converst JSON dict to Vendors
-                // return array of vendors in completion block
+                
+                completion(vendors)
         }
         
     }

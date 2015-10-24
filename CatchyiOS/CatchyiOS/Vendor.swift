@@ -10,11 +10,38 @@ import Foundation
 
 struct Vendor {
     var name: String?
-    var currentStars: Int?
-    var totalStars: Int?
+    var location: String?
+    var starsRequired: Int?
+    var starsDates = [String]()
+    var rewards = [Reward]()
     
     
-    func updateWithDictionary(dict: [String: AnyObject]) {
+    
+    mutating func updateWithDictionary(dict: [String: AnyObject]) {
+        
+        if let name = dict["name"] as? String {
+            self.name = name
+        }
+        if let location = dict["location"] as? String {
+            self.location = location
+        }
+        if let starsRequired = dict["starsRequired"] as? Int {
+            self.starsRequired = starsRequired
+        }
+        if let starsArray = dict["stars"] as? [[String: String]] {
+            for starDict in starsArray {
+                if let starDate = starDict["createdAt"] {
+                    self.starsDates.append(starDate)
+                }
+            }
+        }
+        if let rewardsArray = dict["rewards"] as? [[String: AnyObject]] {
+            for rewardDict in rewardsArray {
+                var reward = Reward()
+                reward.updateWithDictionary(rewardDict)
+                rewards.append(reward)
+            }
+        }
         
     }
 
