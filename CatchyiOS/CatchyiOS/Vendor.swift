@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+struct Vendor {
+    var name: String?
+    var currentStars: Int?
+    var totalStars: Int?
+    
+    
+    func updateWithDictionary(dict: [String: AnyObject]) {
+        
+    }
+
+}

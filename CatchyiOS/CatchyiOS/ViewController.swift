@@ -9,17 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let API = CatchyAPI()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        API.getVendors() {
+            vendors in
+            print(vendors)
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
