@@ -40,6 +40,30 @@ class ViewController: UIViewController, UIScrollViewDelegate, SmallCardViewDeleg
         }
         
         scrollView.delegate = self
+        setNotification()
+        
+        print(UIFont.familyNames())
+    }
+    
+    func setNotification() {
+        
+//        UILocalNotification* localNotification = [[UILocalNotificationalloc] init];
+//        localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:60];
+//        localNotification.alertBody = @"Your alert message";
+//        localNotification.timeZone = [NSTimeZone defaultTimeZone];
+//        [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+        
+        
+        
+        
+        let notification = UILocalNotification()
+        let interval = NSDate(timeIntervalSinceNow: 10)
+        notification.fireDate = interval
+        notification.alertBody = "You've earned stars at Jinya!"
+        notification.alertAction = "action"
+
+        notification.timeZone = NSTimeZone.defaultTimeZone()
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
     
     func createCardsForVendors() {
@@ -50,8 +74,8 @@ class ViewController: UIViewController, UIScrollViewDelegate, SmallCardViewDeleg
                 switch name {
                 case "Newegg": card.imageView.image = UIImage(named: "bg-orange")
                 case "Super Chef": card.imageView.image = UIImage(named: "bg-purp")
-                case "Papa Johns": card.imageView.image = UIImage(named: "bg-teal")
-                case "JINYA Ramen Bar": card.imageView.image = UIImage(named: "bg-darkgrey")
+                case "Papa John's": card.imageView.image = UIImage(named: "bg-teal")
+                case "Jinya Ramen Bar": card.imageView.image = UIImage(named: "bg-grey")
                 case "American Eagle": card.imageView.image = UIImage(named: "bg-red")
                 default: card.imageView.image = UIImage(named: "bg-purp")
                 }
@@ -95,8 +119,8 @@ class ViewController: UIViewController, UIScrollViewDelegate, SmallCardViewDeleg
             if card.vendor?.name == name {
                 activeCard = card
                 
-                UIView.animateWithDuration(0.4, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.2, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
-                        card.frame.origin.y = 26
+                UIView.animateWithDuration(0.4, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+                        card.frame.origin.y = 20
                         card.frame.size.height = 552
                         card.imageView.frame.size.width = 365
                         card.frame.size.width = 365
@@ -108,6 +132,8 @@ class ViewController: UIViewController, UIScrollViewDelegate, SmallCardViewDeleg
                     card.starFour.alpha = 0.0
                     card.starFive.alpha = 0.0
                     card.starSix.alpha = 0.0
+                    card.rewardImage.alpha = 0.0
+                    card.newImage.alpha = 0.0
                     
                     }, completion: { _ in
                         let detailVC = DetailViewController.viewController()
@@ -136,7 +162,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, SmallCardViewDeleg
                 activeCard = nil
                 
                 UIView.animateWithDuration(0.4, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.2, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
-                    card.frame.origin.y = 200
+                    card.frame.origin.y = 100
                     card.frame.size.height = 450
                     card.imageView.frame.size.width = 335
                     card.frame.size.width = 335
@@ -156,7 +182,8 @@ class ViewController: UIViewController, UIScrollViewDelegate, SmallCardViewDeleg
             } else {
                 // The Rest
                 UIView.animateWithDuration(0.4, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
-                    card.frame.origin.y = 200
+//                    card.frame.origin.y = 150
+                    self.positionCards()
                     }, completion: { _ in
                         self.positionCards()
                         

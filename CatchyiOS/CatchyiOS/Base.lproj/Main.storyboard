@@ -100,12 +100,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZv-Px-d8D">
-                                        <rect key="frame" x="14" y="29" width="23" height="17"/>
+                                        <rect key="frame" x="14" y="15.5" width="44" height="44"/>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="17" id="0Lf-1e-2oL"/>
-                                            <constraint firstAttribute="width" constant="23" id="7y7-qM-Wk2"/>
+                                            <constraint firstAttribute="height" constant="44" id="0Lf-1e-2oL"/>
+                                            <constraint firstAttribute="width" constant="44" id="7y7-qM-Wk2"/>
                                         </constraints>
+                                        <inset key="contentEdgeInsets" minX="3" minY="13" maxX="16" maxY="13"/>
                                         <state key="normal" image="icon-merchant-back.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>

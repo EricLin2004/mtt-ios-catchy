@@ -59,6 +59,11 @@
 		5EE8B9181BDD0BD400C358F0 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE8B9171BDD0BD400C358F0 /* PurchaseView.swift */; };
 		5EE8B91A1BDD10D600C358F0 /* button-close.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE8B9191BDD10D600C358F0 /* button-close.png */; };
 		5EE8B91C1BDD15D200C358F0 /* button-purchase.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE8B91B1BDD15D200C358F0 /* button-purchase.png */; };
+		5EE8B9231BDD2AAE00C358F0 /* Ahmet Altun - HalisR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EE8B91E1BDD2AAE00C358F0 /* Ahmet Altun - HalisR-Bold.otf */; };
+		5EE8B9241BDD2AAE00C358F0 /* HalisR-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EE8B91F1BDD2AAE00C358F0 /* HalisR-Book.otf */; };
+		5EE8B9251BDD2AAE00C358F0 /* HalisR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EE8B9201BDD2AAE00C358F0 /* HalisR-Light.otf */; };
+		5EE8B9261BDD2AAE00C358F0 /* HalisR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EE8B9211BDD2AAE00C358F0 /* HalisR-Medium.otf */; };
+		5EE8B9271BDD2AAE00C358F0 /* Ahmet Altun - HalisR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EE8B9221BDD2AAE00C358F0 /* Ahmet Altun - HalisR-Regular.otf */; };
 		5EFE6BE71BDC33D80043E676 /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFE6BE61BDC33D80043E676 /* Reward.swift */; };
 		5EFE6BEA1BDC53120043E676 /* SmallCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EFE6BE91BDC53120043E676 /* SmallCardView.xib */; };
 		5EFE6BEC1BDC55070043E676 /* SmallCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFE6BEB1BDC55070043E676 /* SmallCardView.swift */; };
@@ -118,6 +123,11 @@
 		5EE8B9171BDD0BD400C358F0 /* PurchaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
 		5EE8B9191BDD10D600C358F0 /* button-close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-close.png"; sourceTree = "<group>"; };
 		5EE8B91B1BDD15D200C358F0 /* button-purchase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-purchase.png"; sourceTree = "<group>"; };
+		5EE8B91E1BDD2AAE00C358F0 /* Ahmet Altun - HalisR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ahmet Altun - HalisR-Bold.otf"; sourceTree = "<group>"; };
+		5EE8B91F1BDD2AAE00C358F0 /* HalisR-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HalisR-Book.otf"; sourceTree = "<group>"; };
+		5EE8B9201BDD2AAE00C358F0 /* HalisR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HalisR-Light.otf"; sourceTree = "<group>"; };
+		5EE8B9211BDD2AAE00C358F0 /* HalisR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HalisR-Medium.otf"; sourceTree = "<group>"; };
+		5EE8B9221BDD2AAE00C358F0 /* Ahmet Altun - HalisR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ahmet Altun - HalisR-Regular.otf"; sourceTree = "<group>"; };
 		5EFE6BE61BDC33D80043E676 /* Reward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
 		5EFE6BE91BDC53120043E676 /* SmallCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallCardView.xib; sourceTree = "<group>"; };
 		5EFE6BEB1BDC55070043E676 /* SmallCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallCardView.swift; sourceTree = "<group>"; };
@@ -176,6 +186,7 @@
 		5E1E739C1BDC21B400B0B247 /* CatchyiOS */ = {
 			isa = PBXGroup;
 			children = (
+				5EE8B91D1BDD2AA100C358F0 /* Fonts */,
 				5EE8B8CE1BDCC5AD00C358F0 /* Assets */,
 				5E6820301BDC7A6800D9686F /* View Controllers */,
 				5EFE6BE81BDC52FD0043E676 /* Views */,
@@ -248,6 +259,18 @@
 				5EE8B8D71BDCC5BA00C358F0 /* content-placeholder.png */,
 			);
 			name = Assets;
+			sourceTree = "<group>";
+		};
+		5EE8B91D1BDD2AA100C358F0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5EE8B91E1BDD2AAE00C358F0 /* Ahmet Altun - HalisR-Bold.otf */,
+				5EE8B91F1BDD2AAE00C358F0 /* HalisR-Book.otf */,
+				5EE8B9201BDD2AAE00C358F0 /* HalisR-Light.otf */,
+				5EE8B9211BDD2AAE00C358F0 /* HalisR-Medium.otf */,
+				5EE8B9221BDD2AAE00C358F0 /* Ahmet Altun - HalisR-Regular.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		5EFE6BE81BDC52FD0043E676 /* Views */ = {
@@ -329,6 +352,7 @@
 			files = (
 				5EE8B8FD1BDCC5C600C358F0 /* icon-home-user.png in Resources */,
 				5EE8B8FE1BDCC5C600C358F0 /* icon-merchant-back.png in Resources */,
+				5EE8B9271BDD2AAE00C358F0 /* Ahmet Altun - HalisR-Regular.otf in Resources */,
 				5EE8B9001BDCC5C600C358F0 /* icon-merchant-dotline.png in Resources */,
 				5EB260231BDC98B2003D852E /* LargeInfoCardView.xib in Resources */,
 				5EE8B8F81BDCC5C600C358F0 /* icon-home-search.png in Resources */,
@@ -349,13 +373,16 @@
 				5EE8B8DB1BDCC5BA00C358F0 /* bg-orange.png in Resources */,
 				5EE8B9091BDCC5C600C358F0 /* label-new.png in Resources */,
 				5EE8B9031BDCC5C600C358F0 /* icon-merchant-options.png in Resources */,
+				5EE8B9261BDD2AAE00C358F0 /* HalisR-Medium.otf in Resources */,
 				5EE8B9081BDCC5C600C358F0 /* icon-merchant-website.png in Resources */,
 				5EE8B8DF1BDCC5BA00C358F0 /* bg-white.png in Resources */,
 				5EE8B8FB1BDCC5C600C358F0 /* icon-home-starline-dark.png in Resources */,
 				5EE8B9071BDCC5C600C358F0 /* icon-merchant-starholeempty.png in Resources */,
 				5EE8B8FC1BDCC5C600C358F0 /* icon-home-starline-white.png in Resources */,
+				5EE8B9241BDD2AAE00C358F0 /* HalisR-Book.otf in Resources */,
 				5E1E73A51BDC21B400B0B247 /* Assets.xcassets in Resources */,
 				5EB2601D1BDC89EF003D852E /* LargeRewardCardView.xib in Resources */,
+				5EE8B9231BDD2AAE00C358F0 /* Ahmet Altun - HalisR-Bold.otf in Resources */,
 				5EB2601B1BDC7C10003D852E /* LargeCardView.xib in Resources */,
 				5EE8B9041BDCC5C600C358F0 /* icon-merchant-pin.png in Resources */,
 				5EE8B8F71BDCC5C600C358F0 /* icon-home-reward.png in Resources */,
@@ -364,6 +391,7 @@
 				5EE8B8D91BDCC5BA00C358F0 /* bg-grey.png in Resources */,
 				5EE8B9011BDCC5C600C358F0 /* icon-merchant-giftdark.png in Resources */,
 				5EE8B8DD1BDCC5BA00C358F0 /* bg-red.png in Resources */,
+				5EE8B9251BDD2AAE00C358F0 /* HalisR-Light.otf in Resources */,
 				5EE8B91C1BDD15D200C358F0 /* button-purchase.png in Resources */,
 				5E1E73A31BDC21B400B0B247 /* Main.storyboard in Resources */,
 				5EE8B91A1BDD10D600C358F0 /* button-close.png in Resources */,

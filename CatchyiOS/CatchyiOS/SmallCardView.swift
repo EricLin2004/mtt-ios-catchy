@@ -21,37 +21,80 @@ class SmallCardView: UIView {
     @IBOutlet weak var starFive: UIImageView!
     @IBOutlet weak var starSix: UIImageView!
     
+    @IBOutlet weak var newImage: UIImageView!
+    
+    @IBOutlet weak var rewardImage: UIImageView!
+    
+    
     var delegate: SmallCardViewDelegate?
     
     var vendor: Vendor? {
         didSet {
             nameLabel.text = vendor?.name
+            let font = UIFont(name: "HalisR-Medium", size: 14)
+            nameLabel.font = font
             
-            if let vendor = vendor {
-                let stars = vendor.starsDates
-                let count = stars.count
-                print(count)
-                
-                if count > 0 {
-                    starOne.image = UIImage(named: "icon-home-starfilled-white")
-                }
-                if count > 1 {
-                    starTwo.image = UIImage(named: "icon-home-starfilled-white")
-                }
-                if count > 2 {
-                    starThree.image = UIImage(named: "icon-home-starfilled-white")
-                }
-                if count > 3 {
-                    starFour.image = UIImage(named: "icon-home-starfilled-white")
-                }
-                if count > 4 {
-                    starFive.image = UIImage(named: "icon-home-starfilled-white")
-                }
-                if count > 5 {
-                    starSix.image = UIImage(named: "icon-home-starfilled-white")
-                }
+            if vendor?.name == "Newegg" {
+                rewardImage.alpha = 1.0
+            }
+            
+            if vendor?.name == "Jinya Ramen Bar" {
+                newImage.alpha = 1.0
+                nameLabel.textColor = UIColor.darkGrayColor()
+                if let vendor = vendor {
+                    let stars = vendor.starsDates
+                    let count = stars.count
+                    print(count)
                     
+//                    if count > 0 {
+                        starOne.image = UIImage(named: "icon-home-starfilled-dark")
+//                    }
+//                    if count > 1 {
+                        starTwo.image = UIImage(named: "icon-home-starline-dark")
+//                    }
+//                    if count > 2 {
+                        starThree.image = UIImage(named: "icon-home-starline-dark")
+//                    }
+//                    if count > 3 {
+                        starFour.image = UIImage(named: "icon-home-starline-dark")
+//                    }
+//                    if count > 4 {
+                        starFive.image = UIImage(named: "icon-home-starline-dark")
+//                    }
+//                    if count > 5 {
+                        starSix.image = UIImage(named: "icon-home-starline-dark")
+//                    }
+                    
+                    
+                }
+            } else {
                 
+                if let vendor = vendor {
+                    let stars = vendor.starsDates
+                    let count = stars.count
+                    print(count)
+                    
+                    if count > 0 {
+                        starOne.image = UIImage(named: "icon-home-starfilled-white")
+                    }
+                    if count > 1 {
+                        starTwo.image = UIImage(named: "icon-home-starfilled-white")
+                    }
+                    if count > 2 {
+                        starThree.image = UIImage(named: "icon-home-starfilled-white")
+                    }
+                    if count > 3 {
+                        starFour.image = UIImage(named: "icon-home-starfilled-white")
+                    }
+                    if count > 4 {
+                        starFive.image = UIImage(named: "icon-home-starfilled-white")
+                    }
+                    if count > 5 {
+                        starSix.image = UIImage(named: "icon-home-starfilled-white")
+                    }
+                    
+                    
+                }
             }
         }
     }

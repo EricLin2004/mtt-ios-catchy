@@ -36,6 +36,9 @@ class LargeInfoCardView: UICollectionViewCell {
     override func awakeFromNib() {
         productImage.layer.cornerRadius = productImage.frame.size.width / 2
         productImage.clipsToBounds = true
+        
+        nameLabel.font = UIFont(name: "HalisR-Book", size: 15)
+        topLabel.font = UIFont(name: "HalisR-Medium", size: 20)
     }
     
     class func view() -> LargeInfoCardView {

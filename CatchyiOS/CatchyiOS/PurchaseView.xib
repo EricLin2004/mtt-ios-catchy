@@ -47,6 +47,12 @@ the           icon.</string>
             </subviews>
             <animations/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="codeLabel" destination="6dP-e8-9UV" id="T70-qM-IOE"/>
+                <outlet property="textOneLabel" destination="iQi-gr-cnq" id="I9F-5k-KfT"/>
+                <outlet property="textTwoLabel" destination="mlo-zt-tmQ" id="hfb-UH-QcV"/>
+                <outlet property="voucherLabel" destination="lUD-Ji-dST" id="vSI-EO-bCm"/>
+            </connections>
             <point key="canvasLocation" x="272" y="284"/>
         </view>
     </objects>

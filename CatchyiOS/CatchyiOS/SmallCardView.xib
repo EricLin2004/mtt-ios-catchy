@@ -20,7 +20,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="Dwc-8P-nT9"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -83,6 +83,22 @@
                         <constraint firstAttribute="width" constant="16" id="Omn-T0-s2P"/>
                     </constraints>
                 </imageView>
+                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="label-new.png" translatesAutoresizingMaskIntoConstraints="NO" id="rDa-TR-ldm">
+                    <rect key="frame" x="144" y="49" width="35" height="11"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="11" id="CuV-qI-aKA"/>
+                        <constraint firstAttribute="width" constant="35" id="g45-rn-ERi"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-home-reward.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Z5-9w-XYC">
+                    <rect key="frame" x="194" y="24" width="51" height="51"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="51" id="7tA-TF-lCK"/>
+                        <constraint firstAttribute="height" constant="51" id="Res-rJ-C4O"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <animations/>
             <constraints>
@@ -99,25 +115,35 @@
                 <constraint firstItem="42R-aI-yck" firstAttribute="leading" secondItem="TM6-Vr-AJy" secondAttribute="trailing" constant="2" id="Jme-RQ-YvA"/>
                 <constraint firstItem="iLO-Ji-l0q" firstAttribute="top" secondItem="enN-Pc-q3y" secondAttribute="bottom" constant="-60" id="Kew-nd-7vA"/>
                 <constraint firstItem="Epp-Or-2cp" firstAttribute="leading" secondItem="PlB-4N-3Hc" secondAttribute="leading" id="MDP-AL-KbD"/>
+                <constraint firstItem="rDa-TR-ldm" firstAttribute="top" secondItem="o4e-jF-mDJ" secondAttribute="bottom" constant="4" id="NKH-7p-qkZ"/>
+                <constraint firstItem="rDa-TR-ldm" firstAttribute="leading" secondItem="enN-Pc-q3y" secondAttribute="trailing" constant="8" id="Of4-nT-1q3"/>
                 <constraint firstItem="iLO-Ji-l0q" firstAttribute="top" secondItem="PlB-4N-3Hc" secondAttribute="top" id="QmU-k0-BTg"/>
                 <constraint firstItem="enN-Pc-q3y" firstAttribute="leading" secondItem="LLJ-Gu-Izs" secondAttribute="trailing" constant="2" id="Sb7-c1-UKG"/>
                 <constraint firstItem="iLO-Ji-l0q" firstAttribute="top" secondItem="TM6-Vr-AJy" secondAttribute="bottom" constant="-60" id="Tkn-vV-V7i"/>
+                <constraint firstItem="rDa-TR-ldm" firstAttribute="top" secondItem="PlB-4N-3Hc" secondAttribute="top" constant="29" id="Uai-06-AiY"/>
                 <constraint firstItem="TM6-Vr-AJy" firstAttribute="leading" secondItem="PLu-wo-w8d" secondAttribute="trailing" constant="2" id="Yf0-9f-UT3"/>
                 <constraint firstItem="o4e-jF-mDJ" firstAttribute="leading" secondItem="PlB-4N-3Hc" secondAttribute="leading" constant="30" id="eWQ-Mz-nJQ"/>
+                <constraint firstItem="9Z5-9w-XYC" firstAttribute="top" secondItem="PlB-4N-3Hc" secondAttribute="top" constant="24" id="iBp-qf-31Y"/>
                 <constraint firstItem="o4e-jF-mDJ" firstAttribute="top" secondItem="PlB-4N-3Hc" secondAttribute="top" constant="24" id="nOE-v8-YYm"/>
+                <constraint firstAttribute="trailing" secondItem="rDa-TR-ldm" secondAttribute="trailing" constant="24" id="p1X-F2-bM7"/>
                 <constraint firstItem="iLO-Ji-l0q" firstAttribute="leading" secondItem="PlB-4N-3Hc" secondAttribute="leading" id="puS-J5-yTI"/>
                 <constraint firstItem="LLJ-Gu-Izs" firstAttribute="leading" secondItem="eWE-30-OhH" secondAttribute="trailing" constant="2" id="qem-5h-lS6"/>
                 <constraint firstAttribute="trailing" secondItem="o4e-jF-mDJ" secondAttribute="trailing" constant="16" id="vk6-G7-vXs"/>
+                <constraint firstAttribute="trailing" secondItem="9Z5-9w-XYC" secondAttribute="trailing" constant="35" id="zB0-vk-StM"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
                 <mask key="constraints">
                     <exclude reference="4sm-yc-oBV"/>
+                    <exclude reference="Uai-06-AiY"/>
+                    <exclude reference="p1X-F2-bM7"/>
                 </mask>
             </variation>
             <connections>
                 <outlet property="imageView" destination="iLO-Ji-l0q" id="LOU-cc-qmb"/>
                 <outlet property="nameLabel" destination="o4e-jF-mDJ" id="ZI3-Bt-a1h"/>
+                <outlet property="newImage" destination="rDa-TR-ldm" id="I2f-MQ-VJG"/>
+                <outlet property="rewardImage" destination="9Z5-9w-XYC" id="Rer-p5-Pls"/>
                 <outlet property="starFive" destination="LLJ-Gu-Izs" id="d2u-Ev-EaT"/>
                 <outlet property="starFour" destination="eWE-30-OhH" id="Rt5-Du-dc9"/>
                 <outlet property="starOne" destination="PLu-wo-w8d" id="gAD-D1-iA5"/>
@@ -129,6 +155,8 @@
         </view>
     </objects>
     <resources>
+        <image name="icon-home-reward.png" width="103" height="103"/>
         <image name="icon-home-starline-white.png" width="32" height="30"/>
+        <image name="label-new.png" width="71" height="22"/>
     </resources>
 </document>

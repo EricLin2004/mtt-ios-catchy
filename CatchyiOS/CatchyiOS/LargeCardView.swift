@@ -18,10 +18,10 @@ class LargeCardView: UICollectionViewCell, PurchaseDelegate
             if let name = vendor?.name {
                 nameLabel.text = name
                 switch name {
-                case "Newegg":  backgroundImageView.image = UIImage(named: "bg-orange")
+                case "Newegg": backgroundImageView.image = UIImage(named: "bg-orange")
                 case "Super Chef": backgroundImageView.image = UIImage(named: "bg-purp")
-                case "Papa Johns": backgroundImageView.image = UIImage(named: "bg-teal")
-                case "JINYA Ramen Bar": backgroundImageView.image = UIImage(named: "bg-darkgrey")
+                case "Papa John's": backgroundImageView.image = UIImage(named: "bg-teal")
+                case "Jinya Ramen Bar": backgroundImageView.image = UIImage(named: "bg-darkgrey")
                 case "American Eagle": backgroundImageView.image = UIImage(named: "bg-red")
                 default: backgroundImageView.image = UIImage(named: "bg-purp")
                 }
@@ -34,6 +34,16 @@ class LargeCardView: UICollectionViewCell, PurchaseDelegate
             realStarFour.alpha = 0.0
             realStarFive.alpha = 0.0
             realStarSix.alpha = 0.0
+            
+            
+            nameLabel.font = UIFont(name: "HalisR-Medium", size: 30)
+            locationLabel.font = UIFont(name: "HalisR-Light", size: 14)
+            labelOne.font = UIFont(name: "HalisR-Light", size: 12)
+            labelTwo.font = UIFont(name: "HalisR-Light", size: 12)
+            labelThree.font = UIFont(name: "HalisR-Light", size: 12)
+            labelFour.font = UIFont(name: "HalisR-Light", size: 12)
+            labelFive.font = UIFont(name: "HalisR-Light", size: 12)
+            labelSix.font = UIFont(name: "HalisR-Light", size: 12)
             
             
             if let stars = vendor?.starsDates {
@@ -104,12 +114,25 @@ class LargeCardView: UICollectionViewCell, PurchaseDelegate
     @IBOutlet weak var realStarSix: UIImageView!
     
     
+    @IBOutlet weak var mapPinImage: UIImageView!
+    
+    
     @IBOutlet weak var giftImage: UIImageView!
     @IBOutlet weak var bottomViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var bottomView: UIView!
     
     override func awakeFromNib() {
+        
+        nameLabel.alpha = 0.0
+        locationLabel.alpha = 0.0
+        mapPinImage.alpha = 0.0
+        
+        UIView.animateWithDuration(0.3, animations: {
+            self.nameLabel.alpha = 1.0
+            self.locationLabel.alpha = 1.0
+            self.mapPinImage.alpha = 1.0
 
+        })
     }
     
     @IBAction func bottomViewTapped(sender: AnyObject) {

@@ -86,6 +86,14 @@ class LargeRewardCardView: UIView {
         imageTwo.clipsToBounds = true
         imageThree.clipsToBounds = true
         
+        nameLabel.font = UIFont(name: "HalisR-Medium", size: 21)
+        
+        titleOne.font = UIFont(name: "HalisR-Book", size: 12)
+        titleTwo.font = UIFont(name: "HalisR-Book", size: 12)
+        titleThree.font = UIFont(name: "HalisR-Book", size: 12)
+        descriptionOne.font = UIFont(name: "HalisR-Book", size: 11)
+        descriptionTwo.font = UIFont(name: "HalisR-Book", size: 11)
+        descriptionThree.font = UIFont(name: "HalisR-Book", size: 11)
 
     }
     
