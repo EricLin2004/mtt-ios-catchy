@@ -20,22 +20,22 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kdr-vd-cAD" userLabel="NavBar">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="catchy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGT-Ws-0RK">
-                                        <rect key="frame" x="159.5" y="24.5" width="55.5" height="26"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-home-search.png" translatesAutoresizingMaskIntoConstraints="NO" id="Lnq-px-rCQ">
+                                        <rect key="frame" x="338" y="28" width="20" height="20"/>
                                         <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="QnO-Uf-E8O"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-home-user.png" translatesAutoresizingMaskIntoConstraints="NO" id="LVm-ev-kK0">
+                                        <rect key="frame" x="16" y="29" width="16" height="17"/>
+                                        <animations/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-home-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="B5a-c2-c12">
+                                        <rect key="frame" x="163" y="29" width="60" height="18"/>
+                                        <animations/>
+                                    </imageView>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="ZGT-Ws-0RK" firstAttribute="centerX" secondItem="Kdr-vd-cAD" secondAttribute="centerX" id="Utu-HR-62J"/>
-                                    <constraint firstItem="ZGT-Ws-0RK" firstAttribute="centerY" secondItem="Kdr-vd-cAD" secondAttribute="centerY" id="pV2-P6-xAb"/>
                                     <constraint firstAttribute="height" constant="75" id="y9F-qa-rlF"/>
                                 </constraints>
                             </view>
@@ -82,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1117.5" y="266.5"/>
+            <point key="canvasLocation" x="1142.5" y="276.5"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="nOC-Wg-1Qv">
@@ -99,39 +99,31 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7X-w0-oRt" userLabel="Nav bar view">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZv-Px-d8D">
-                                        <rect key="frame" x="14" y="23" width="41" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZv-Px-d8D">
+                                        <rect key="frame" x="14" y="29" width="23" height="17"/>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="0Lf-1e-2oL"/>
-                                            <constraint firstAttribute="width" constant="41" id="7y7-qM-Wk2"/>
+                                            <constraint firstAttribute="height" constant="17" id="0Lf-1e-2oL"/>
+                                            <constraint firstAttribute="width" constant="23" id="7y7-qM-Wk2"/>
                                         </constraints>
-                                        <state key="normal" title="Back">
+                                        <state key="normal" image="icon-merchant-back.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="backButtonTapped:" destination="UYH-Xs-YQN" eventType="touchUpInside" id="9wo-6v-ck9"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="566 robson st." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4R1-Lj-if1">
-                                        <rect key="frame" x="131" y="27" width="112" height="21"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-home-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="dDD-IQ-wEb">
+                                        <rect key="frame" x="157" y="29" width="60" height="18"/>
                                         <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="pz4-0S-BER"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    </imageView>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="4R1-Lj-if1" firstAttribute="centerY" secondItem="J7X-w0-oRt" secondAttribute="centerY" id="0dP-Yp-K30"/>
                                     <constraint firstItem="sZv-Px-d8D" firstAttribute="leading" secondItem="J7X-w0-oRt" secondAttribute="leading" constant="14" id="AfT-wb-E0m"/>
                                     <constraint firstAttribute="height" constant="75" id="QPR-Op-Quv"/>
                                     <constraint firstItem="sZv-Px-d8D" firstAttribute="centerY" secondItem="J7X-w0-oRt" secondAttribute="centerY" id="R43-Qe-cSd"/>
-                                    <constraint firstItem="4R1-Lj-if1" firstAttribute="centerX" secondItem="J7X-w0-oRt" secondAttribute="centerX" id="nqp-HH-TNH"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wFq-Pp-dEx">
@@ -174,7 +166,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="collectionView" destination="wFq-Pp-dEx" id="ac8-fD-a4Y"/>
-                        <outlet property="navBarTitleLabel" destination="4R1-Lj-if1" id="sgB-yD-8fT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1s7-Jn-msV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -203,4 +194,10 @@
             <point key="canvasLocation" x="305" y="266"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon-home-logo.png" width="119" height="36"/>
+        <image name="icon-home-search.png" width="34" height="37"/>
+        <image name="icon-home-user.png" width="32" height="35"/>
+        <image name="icon-merchant-back.png" width="47" height="35"/>
+    </resources>
 </document>

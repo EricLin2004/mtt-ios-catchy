@@ -54,6 +54,11 @@
 		5EE8B90C1BDCD5EC00C358F0 /* bg-purp.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE8B90B1BDCD5EC00C358F0 /* bg-purp.png */; };
 		5EE8B90F1BDCDEDC00C358F0 /* button-footer.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE8B90D1BDCDEDC00C358F0 /* button-footer.png */; };
 		5EE8B9101BDCDEDC00C358F0 /* button-footerbig.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE8B90E1BDCDEDC00C358F0 /* button-footerbig.png */; };
+		5EE8B9141BDCEE8500C358F0 /* button-header.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE8B9131BDCEE8500C358F0 /* button-header.png */; };
+		5EE8B9161BDD0BAB00C358F0 /* PurchaseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EE8B9151BDD0BAB00C358F0 /* PurchaseView.xib */; };
+		5EE8B9181BDD0BD400C358F0 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE8B9171BDD0BD400C358F0 /* PurchaseView.swift */; };
+		5EE8B91A1BDD10D600C358F0 /* button-close.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE8B9191BDD10D600C358F0 /* button-close.png */; };
+		5EE8B91C1BDD15D200C358F0 /* button-purchase.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE8B91B1BDD15D200C358F0 /* button-purchase.png */; };
 		5EFE6BE71BDC33D80043E676 /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFE6BE61BDC33D80043E676 /* Reward.swift */; };
 		5EFE6BEA1BDC53120043E676 /* SmallCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EFE6BE91BDC53120043E676 /* SmallCardView.xib */; };
 		5EFE6BEC1BDC55070043E676 /* SmallCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFE6BEB1BDC55070043E676 /* SmallCardView.swift */; };
@@ -108,6 +113,11 @@
 		5EE8B90B1BDCD5EC00C358F0 /* bg-purp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-purp.png"; sourceTree = "<group>"; };
 		5EE8B90D1BDCDEDC00C358F0 /* button-footer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-footer.png"; sourceTree = "<group>"; };
 		5EE8B90E1BDCDEDC00C358F0 /* button-footerbig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-footerbig.png"; sourceTree = "<group>"; };
+		5EE8B9131BDCEE8500C358F0 /* button-header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-header.png"; sourceTree = "<group>"; };
+		5EE8B9151BDD0BAB00C358F0 /* PurchaseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PurchaseView.xib; sourceTree = "<group>"; };
+		5EE8B9171BDD0BD400C358F0 /* PurchaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
+		5EE8B9191BDD10D600C358F0 /* button-close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-close.png"; sourceTree = "<group>"; };
+		5EE8B91B1BDD15D200C358F0 /* button-purchase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-purchase.png"; sourceTree = "<group>"; };
 		5EFE6BE61BDC33D80043E676 /* Reward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
 		5EFE6BE91BDC53120043E676 /* SmallCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallCardView.xib; sourceTree = "<group>"; };
 		5EFE6BEB1BDC55070043E676 /* SmallCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallCardView.swift; sourceTree = "<group>"; };
@@ -201,6 +211,9 @@
 		5EE8B8CE1BDCC5AD00C358F0 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				5EE8B91B1BDD15D200C358F0 /* button-purchase.png */,
+				5EE8B9191BDD10D600C358F0 /* button-close.png */,
+				5EE8B9131BDCEE8500C358F0 /* button-header.png */,
 				5EE8B90D1BDCDEDC00C358F0 /* button-footer.png */,
 				5EE8B90E1BDCDEDC00C358F0 /* button-footerbig.png */,
 				5EE8B90B1BDCD5EC00C358F0 /* bg-purp.png */,
@@ -248,6 +261,8 @@
 				5EB2601E1BDC8A87003D852E /* LargeRewardCardView.swift */,
 				5EB260201BDC9882003D852E /* LargeInfoCardView.swift */,
 				5EB260221BDC98B2003D852E /* LargeInfoCardView.xib */,
+				5EE8B9151BDD0BAB00C358F0 /* PurchaseView.xib */,
+				5EE8B9171BDD0BD400C358F0 /* PurchaseView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -323,6 +338,7 @@
 				5EFE6BEA1BDC53120043E676 /* SmallCardView.xib in Resources */,
 				5EE8B9021BDCC5C600C358F0 /* icon-merchant-giftwhite.png in Resources */,
 				5EE8B8DA1BDCC5BA00C358F0 /* bg-newegg.png in Resources */,
+				5EE8B9161BDD0BAB00C358F0 /* PurchaseView.xib in Resources */,
 				5E1E73A81BDC21B400B0B247 /* LaunchScreen.storyboard in Resources */,
 				5EE8B8E01BDCC5BA00C358F0 /* content-placeholder.png in Resources */,
 				5EE8B8F61BDCC5C600C358F0 /* icon-home-logo.png in Resources */,
@@ -348,8 +364,11 @@
 				5EE8B8D91BDCC5BA00C358F0 /* bg-grey.png in Resources */,
 				5EE8B9011BDCC5C600C358F0 /* icon-merchant-giftdark.png in Resources */,
 				5EE8B8DD1BDCC5BA00C358F0 /* bg-red.png in Resources */,
+				5EE8B91C1BDD15D200C358F0 /* button-purchase.png in Resources */,
 				5E1E73A31BDC21B400B0B247 /* Main.storyboard in Resources */,
+				5EE8B91A1BDD10D600C358F0 /* button-close.png in Resources */,
 				5EE8B8F91BDCC5C600C358F0 /* icon-home-starfilled-dark.png in Resources */,
+				5EE8B9141BDCEE8500C358F0 /* button-header.png in Resources */,
 				5EE8B8DE1BDCC5BA00C358F0 /* bg-teal.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +435,7 @@
 				5EB260211BDC9882003D852E /* LargeInfoCardView.swift in Sources */,
 				5E1E73B01BDC22DC00B0B247 /* CatchyAPI.swift in Sources */,
 				5EFE6BE71BDC33D80043E676 /* Reward.swift in Sources */,
+				5EE8B9181BDD0BD400C358F0 /* PurchaseView.swift in Sources */,
 				5EB260191BDC7BD0003D852E /* LargeCardView.swift in Sources */,
 				5EB2601F1BDC8A87003D852E /* LargeRewardCardView.swift in Sources */,
 				5E6820321BDC7A7C00D9686F /* DetailViewController.swift in Sources */,

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import SDWebImage
 
-class LargeRewardCardView: UICollectionViewCell {
+class LargeRewardCardView: UIView {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var backgroundImage: UIImageView!
@@ -24,6 +24,8 @@ class LargeRewardCardView: UICollectionViewCell {
     @IBOutlet weak var descriptionOne: UILabel!
     @IBOutlet weak var descriptionTwo: UILabel!
     @IBOutlet weak var descriptionThree: UILabel!
+    
+    var delegate: PurchaseDelegate?
     
     var rewards: [Reward]? {
         didSet {
@@ -65,10 +67,16 @@ class LargeRewardCardView: UICollectionViewCell {
         }
     }
     
+    class func view() -> LargeRewardCardView {
+        let kNibName = "LargeRewardCardView"
+        let nib = UINib(nibName: kNibName, bundle: NSBundle.mainBundle())
+        let cardView = nib.instantiateWithOwner(self, options: nil).first as! LargeRewardCardView
+        return cardView
+    }
+    
     override func awakeFromNib() {
         
-        backgroundImage.image = UIImage(named: "bg-grey")
-
+//        backgroundImage.image = UIImage(named: "bg-grey")
         
         imageOne.layer.cornerRadius = imageOne.frame.size.width / 2
         imageTwo.layer.cornerRadius = imageTwo.frame.size.width / 2
@@ -80,5 +88,14 @@ class LargeRewardCardView: UICollectionViewCell {
         
 
     }
+    
+    
+    @IBAction func topRewardTapped(sender: AnyObject) {
+        if let reward = rewards?.first {
+            delegate?.showPurchaseView(reward)
+
+        }
+    }
+    
     
 }

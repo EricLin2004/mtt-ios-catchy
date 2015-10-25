@@ -16,19 +16,28 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o7b-M5-zCh" userLabel="Background Image View">
                         <rect key="frame" x="0.0" y="0.0" width="335" height="552"/>
                         <animations/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rewards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a53-wr-dTe">
-                        <rect key="frame" x="16" y="24" width="259" height="28"/>
+                    <view alpha="0.10000000000000001" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S5Q-0Z-fHM">
+                        <rect key="frame" x="0.0" y="103" width="335" height="123"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <view alpha="0.10000000149011612" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XWq-UC-FbU">
+                        <rect key="frame" x="0.0" y="345" width="335" height="123"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reward Items" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a53-wr-dTe">
+                        <rect key="frame" x="16" y="24" width="303" height="28"/>
                         <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="28" id="nE5-fp-GAK"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMB-3B-Y41">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMB-3B-Y41">
                         <rect key="frame" x="16" y="56" width="256" height="29"/>
                         <animations/>
                         <constraints>
@@ -90,6 +99,13 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z27-FB-g7t">
+                        <rect key="frame" x="124" y="272" width="191" height="20.5"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDF-IK-LYf">
                         <rect key="frame" x="124" y="360" width="191" height="28"/>
                         <animations/>
@@ -107,13 +123,13 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z27-FB-g7t">
-                        <rect key="frame" x="124" y="272" width="191" height="20.5"/>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Pj-C1-EPR">
+                        <rect key="frame" x="113" y="119" width="202" height="87.5"/>
                         <animations/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                        <connections>
+                            <action selector="topRewardTapped:" destination="hGm-FG-JF3" eventType="touchUpInside" id="KE7-o2-vQf"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <animations/>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -126,7 +142,7 @@
                 <constraint firstItem="x8T-Lx-A56" firstAttribute="leading" secondItem="q6g-Zv-smo" secondAttribute="trailing" constant="12" id="5gU-PG-ciB"/>
                 <constraint firstAttribute="trailing" secondItem="8N6-lB-zjW" secondAttribute="trailing" constant="20" id="8Jg-NK-6R3"/>
                 <constraint firstItem="a53-wr-dTe" firstAttribute="leading" secondItem="hGm-FG-JF3" secondAttribute="leading" constant="16" id="8ot-Zr-SjB"/>
-                <constraint firstAttribute="trailing" secondItem="a53-wr-dTe" secondAttribute="trailing" constant="60" id="9wM-A2-veP"/>
+                <constraint firstAttribute="trailing" secondItem="a53-wr-dTe" secondAttribute="trailing" constant="16" id="9wM-A2-veP"/>
                 <constraint firstItem="zui-w9-AHq" firstAttribute="leading" secondItem="hGm-FG-JF3" secondAttribute="leading" constant="16" id="AvT-oa-kkR"/>
                 <constraint firstItem="q6g-Zv-smo" firstAttribute="top" secondItem="zui-w9-AHq" secondAttribute="bottom" constant="24" id="DxW-z6-dBg"/>
                 <constraint firstItem="o7b-M5-zCh" firstAttribute="leading" secondItem="hGm-FG-JF3" secondAttribute="leading" id="GXf-hh-vJy"/>

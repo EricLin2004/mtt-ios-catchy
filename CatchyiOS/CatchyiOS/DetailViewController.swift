@@ -9,9 +9,12 @@
 import Foundation
 import UIKit
 
-class DetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+protocol PurchaseDelegate {
+    func showPurchaseView(reward: Reward)
+}
+
+class DetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, PurchaseDelegate {
     
-    @IBOutlet weak var navBarTitleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var vendor: Vendor?
@@ -44,26 +47,27 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 1
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         if indexPath.row == 0 {
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier("LargeCardView", forIndexPath: indexPath) as! LargeCardView
+            cell.delegate = self
             if let vendor = vendor {
                 cell.vendor = vendor
             }
             return cell
         }
         
-        if indexPath.row == 1 {
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("LargeRewardCardView", forIndexPath: indexPath) as! LargeRewardCardView
-            if let vendor = vendor {
-                cell.rewards = vendor.rewards
-            }
-            return cell
-        }
+//        if indexPath.row == 1 {
+//            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("LargeRewardCardView", forIndexPath: indexPath) as! LargeRewardCardView
+//            if let vendor = vendor {
+//                cell.rewards = vendor.rewards
+//            }
+//            return cell
+//        }
         
 //        if indexPath.row == 2 {
 //            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("LargeInfoCardView", forIndexPath: indexPath) as! LargeInfoCardView
@@ -81,6 +85,17 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     @IBAction func backButtonTapped(sender: AnyObject) {
         delegate?.backButtonTapped()
         navigationController?.popViewControllerAnimated(false)
+    }
+    
+    func showPurchaseView(reward: Reward) {
+        let infoView = LargeInfoCardView.view()
+        infoView.reward = reward
+        infoView.alpha = 0.0
+        view.addSubview(infoView)
+        
+        UIView.animateWithDuration(0.3, animations: {
+            infoView.alpha = 1.0
+        })
     }
     
     
