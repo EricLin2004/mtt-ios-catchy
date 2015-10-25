@@ -8,7 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIScrollViewDelegate {
+protocol SmallCardViewDelegate {
+    func cardTappedWithName(name: String)
+}
+
+class ViewController: UIViewController, UIScrollViewDelegate, SmallCardViewDelegate {
     
     @IBOutlet weak var navBarView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -16,7 +20,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     let API = CatchyAPI()
     var vendors = [Vendor]()
-    var cards = [UIView]()
+    var cards = [SmallCardView]()
     let initialCardRect = CGRect(x: 50, y: 0, width: 275, height: 450)
 
 
@@ -38,9 +42,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     func createCardsForVendors() {
         for vendor in vendors {
-            let card = UIView(frame: initialCardRect)
-            card.backgroundColor = UIColor(red: CGFloat(arc4random_uniform(255))/255, green: CGFloat(arc4random_uniform(255))/255, blue: CGFloat(arc4random_uniform(255))/255, alpha: 1)
-            //TODO: Have an actual view for the card, setup the view with the vendor properties
+            let card = SmallCardView.view()
+            card.imageView.backgroundColor = UIColor(red: CGFloat(arc4random_uniform(255))/255, green: CGFloat(arc4random_uniform(255))/255, blue: CGFloat(arc4random_uniform(255))/255, alpha: 1)
+            card.vendor = vendor
+            card.delegate = self
             cards.append(card)
             containerView.addSubview(card)
         }
@@ -68,6 +73,29 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     func scrollViewDidScroll(scrollView: UIScrollView) {
         positionCards()
     }
-
+    
+    func cardTappedWithName(name: String) {
+        for card in cards {
+            
+            // Tapped Card
+            if card.vendor?.name == name {
+                
+                UIView.animateWithDuration(0.4, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.2, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+                        card.frame.origin.y = 20
+                        card.frame.size.height = 552
+                        card.imageView.frame.size.width = 335
+                        card.frame.size.width = 335
+                        card.frame.origin.x = 20
+                    }, completion: { _ in })
+                
+            } else {
+                // The Rest
+                UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+                    card.frame.origin.y = 600
+                    }, completion: { _ in })
+            }
+        }
+    }
+    
 }
 
