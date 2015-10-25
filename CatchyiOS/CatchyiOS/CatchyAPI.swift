@@ -17,13 +17,13 @@ struct CatchyAPI {
     //TODO: completion block that takes vendors
     func getVendors(completion: ([Vendor]) -> Void) {
         
-        Alamofire.request(.GET, "https://catchy.herokuapp.com/v1/users/fh123", headers: headers)
+        Alamofire.request(.GET, "https://catchy.herokuapp.com/v1/users/de89633d-028d-48e0-9535-10b08ab9f2e7", headers: headers)
             .responseJSON { response in
 
                 var vendors = [Vendor]()
                 
                 if let JSON = response.result.value {
-                    if let vendorsArray = JSON["vendors"] as? [[String: AnyObject]] {
+                    if let vendorsArray = JSON["merchants"] as? [[String: AnyObject]] {
                         for vendorDict in vendorsArray {
                             var vendor = Vendor()
                             vendor.updateWithDictionary(vendorDict)

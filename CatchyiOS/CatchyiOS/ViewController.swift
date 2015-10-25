@@ -30,9 +30,9 @@ class ViewController: UIViewController, UIScrollViewDelegate, SmallCardViewDeleg
         API.getVendors() {
             vendors in
             self.vendors = vendors
-            self.vendors.append(vendors.first!)
-            self.vendors.append(vendors.first!)
-            self.vendors.append(vendors.first!)
+//            self.vendors.append(vendors.first!)
+//            self.vendors.append(vendors.first!)
+//            self.vendors.append(vendors.first!)
             self.createCardsForVendors()
             print("vendors \(vendors.count)")
         }
@@ -86,13 +86,21 @@ class ViewController: UIViewController, UIScrollViewDelegate, SmallCardViewDeleg
                         card.imageView.frame.size.width = 335
                         card.frame.size.width = 335
                         card.frame.origin.x = 20
-                    }, completion: { _ in })
+                    }, completion: { _ in
+                        let detailVC = DetailViewController.viewController()
+                        detailVC.vendor = card.vendor
+                        self.navigationController?.pushViewController(detailVC, animated: false)
+                })
                 
             } else {
                 // The Rest
-                UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+                UIView.animateWithDuration(0.4, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
                     card.frame.origin.y = 600
-                    }, completion: { _ in })
+                    }, completion: { _ in
+//                        let detailVC = DetailViewController.viewController()
+//                        self.navigationController?.pushViewController(detailVC, animated: false)
+                
+                })
             }
         }
     }

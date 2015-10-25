@@ -87,9 +87,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-CatchyiOS/Alamofire.framework"
   install_framework "Pods-CatchyiOS/AlamofireObjectMapper.framework"
   install_framework "Pods-CatchyiOS/ObjectMapper.framework"
+  install_framework "Pods-CatchyiOS/SDWebImage.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-CatchyiOS/Alamofire.framework"
   install_framework "Pods-CatchyiOS/AlamofireObjectMapper.framework"
   install_framework "Pods-CatchyiOS/ObjectMapper.framework"
+  install_framework "Pods-CatchyiOS/SDWebImage.framework"
 fi

@@ -23,12 +23,12 @@ struct Vendor {
         if let location = dict["location"] as? String {
             self.location = location
         }
-        if let starsRequired = dict["starsRequired"] as? Int {
+        if let starsRequired = dict["stars_required"] as? Int {
             self.starsRequired = starsRequired
         }
         if let starsArray = dict["stars"] as? [[String: String]] {
             for starDict in starsArray {
-                if let starDate = starDict["createdAt"] {
+                if let starDate = starDict["created_at"] {
                     self.starsDates.append(starDate)
                 }
             }
