@@ -14,11 +14,45 @@ class SmallCardView: UIView {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var starOne: UIImageView!
+    @IBOutlet weak var starTwo: UIImageView!
+    @IBOutlet weak var starThree: UIImageView!
+    @IBOutlet weak var starFour: UIImageView!
+    @IBOutlet weak var starFive: UIImageView!
+    @IBOutlet weak var starSix: UIImageView!
+    
     var delegate: SmallCardViewDelegate?
     
     var vendor: Vendor? {
         didSet {
             nameLabel.text = vendor?.name
+            
+            if let vendor = vendor {
+                let stars = vendor.starsDates
+                let count = stars.count
+                print(count)
+                
+                if count > 0 {
+                    starOne.image = UIImage(named: "icon-home-starfilled-white")
+                }
+                if count > 1 {
+                    starTwo.image = UIImage(named: "icon-home-starfilled-white")
+                }
+                if count > 2 {
+                    starThree.image = UIImage(named: "icon-home-starfilled-white")
+                }
+                if count > 3 {
+                    starFour.image = UIImage(named: "icon-home-starfilled-white")
+                }
+                if count > 4 {
+                    starFive.image = UIImage(named: "icon-home-starfilled-white")
+                }
+                if count > 5 {
+                    starSix.image = UIImage(named: "icon-home-starfilled-white")
+                }
+                    
+                
+            }
         }
     }
     

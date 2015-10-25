@@ -15,6 +15,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     @IBOutlet weak var collectionView: UICollectionView!
     
     var vendor: Vendor?
+    var delegate: DetailDelegate?
     
     
     override func viewDidLoad() {
@@ -78,6 +79,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     
     @IBAction func backButtonTapped(sender: AnyObject) {
+        delegate?.backButtonTapped()
         navigationController?.popViewControllerAnimated(false)
     }
     

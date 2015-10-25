@@ -60,11 +60,16 @@ class LargeRewardCardView: UICollectionViewCell {
                 }
             }
             
+
+            
         }
     }
     
     override func awakeFromNib() {
-        backgroundImage.backgroundColor = UIColor.blueColor()
+        
+        backgroundImage.image = UIImage(named: "bg-grey")
+
+        
         imageOne.layer.cornerRadius = imageOne.frame.size.width / 2
         imageTwo.layer.cornerRadius = imageTwo.frame.size.width / 2
         imageThree.layer.cornerRadius = imageThree.frame.size.width / 2
@@ -72,6 +77,8 @@ class LargeRewardCardView: UICollectionViewCell {
         imageOne.clipsToBounds = true
         imageTwo.clipsToBounds = true
         imageThree.clipsToBounds = true
+        
+
     }
     
 }

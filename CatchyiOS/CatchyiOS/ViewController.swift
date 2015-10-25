@@ -12,7 +12,11 @@ protocol SmallCardViewDelegate {
     func cardTappedWithName(name: String)
 }
 
-class ViewController: UIViewController, UIScrollViewDelegate, SmallCardViewDelegate {
+protocol DetailDelegate {
+    func backButtonTapped()
+}
+
+class ViewController: UIViewController, UIScrollViewDelegate, SmallCardViewDelegate, DetailDelegate {
     
     @IBOutlet weak var navBarView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -21,7 +25,8 @@ class ViewController: UIViewController, UIScrollViewDelegate, SmallCardViewDeleg
     let API = CatchyAPI()
     var vendors = [Vendor]()
     var cards = [SmallCardView]()
-    let initialCardRect = CGRect(x: 50, y: 0, width: 275, height: 450)
+    let initialCardRect = CGRect(x: 20, y: 0, width: 335, height: 450)
+    var activeCard: SmallCardView?
 
 
     override func viewDidLoad() {
@@ -30,9 +35,6 @@ class ViewController: UIViewController, UIScrollViewDelegate, SmallCardViewDeleg
         API.getVendors() {
             vendors in
             self.vendors = vendors
-//            self.vendors.append(vendors.first!)
-//            self.vendors.append(vendors.first!)
-//            self.vendors.append(vendors.first!)
             self.createCardsForVendors()
             print("vendors \(vendors.count)")
         }
@@ -43,7 +45,19 @@ class ViewController: UIViewController, UIScrollViewDelegate, SmallCardViewDeleg
     func createCardsForVendors() {
         for vendor in vendors {
             let card = SmallCardView.view()
-            card.imageView.backgroundColor = UIColor(red: CGFloat(arc4random_uniform(255))/255, green: CGFloat(arc4random_uniform(255))/255, blue: CGFloat(arc4random_uniform(255))/255, alpha: 1)
+            
+            if let name = vendor.name {
+                switch name {
+                case "Newegg": card.imageView.image = UIImage(named: "bg-orange")
+                case "Super Chef": card.imageView.image = UIImage(named: "bg-purp")
+                case "Papa Johns": card.imageView.image = UIImage(named: "bg-teal")
+                case "JINYA Ramen Bar": card.imageView.image = UIImage(named: "bg-darkgrey")
+                case "American Eagle": card.imageView.image = UIImage(named: "bg-red")
+                default: card.imageView.image = UIImage(named: "bg-purp")
+                }
+            }
+            
+            
             card.vendor = vendor
             card.delegate = self
             cards.append(card)
@@ -53,8 +67,8 @@ class ViewController: UIViewController, UIScrollViewDelegate, SmallCardViewDeleg
     }
     
     func positionCards() {
-        let offsetPerCard: CGFloat = 70
-        let widthScalingRatio: CGFloat = 0.3
+        let offsetPerCard: CGFloat = 90
+        let widthScalingRatio: CGFloat = 0.2
         let contentOffset: CGFloat = scrollView.contentOffset.y
         for (index, card) in cards.enumerate() {
             // Set Origin
@@ -79,16 +93,26 @@ class ViewController: UIViewController, UIScrollViewDelegate, SmallCardViewDeleg
             
             // Tapped Card
             if card.vendor?.name == name {
+                activeCard = card
                 
                 UIView.animateWithDuration(0.4, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.2, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
-                        card.frame.origin.y = 20
+                        card.frame.origin.y = 26
                         card.frame.size.height = 552
-                        card.imageView.frame.size.width = 335
-                        card.frame.size.width = 335
-                        card.frame.origin.x = 20
+                        card.imageView.frame.size.width = 365
+                        card.frame.size.width = 365
+                        card.frame.origin.x = 5
+                    card.nameLabel.alpha = 0.0
+                    card.starOne.alpha = 0.0
+                    card.starTwo.alpha = 0.0
+                    card.starThree.alpha = 0.0
+                    card.starFour.alpha = 0.0
+                    card.starFive.alpha = 0.0
+                    card.starSix.alpha = 0.0
+                    
                     }, completion: { _ in
                         let detailVC = DetailViewController.viewController()
                         detailVC.vendor = card.vendor
+                        detailVC.delegate = self
                         self.navigationController?.pushViewController(detailVC, animated: false)
                 })
                 
@@ -97,12 +121,49 @@ class ViewController: UIViewController, UIScrollViewDelegate, SmallCardViewDeleg
                 UIView.animateWithDuration(0.4, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
                     card.frame.origin.y = 600
                     }, completion: { _ in
-//                        let detailVC = DetailViewController.viewController()
-//                        self.navigationController?.pushViewController(detailVC, animated: false)
                 
                 })
             }
         }
+    }
+    
+    
+    func backButtonTapped() {
+        for card in cards {
+            
+            // Tapped Card
+            if card.vendor?.name == activeCard?.vendor?.name {
+                activeCard = nil
+                
+                UIView.animateWithDuration(0.4, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.2, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+                    card.frame.origin.y = 200
+                    card.frame.size.height = 450
+                    card.imageView.frame.size.width = 335
+                    card.frame.size.width = 335
+                    card.frame.origin.x = 20
+                    card.nameLabel.alpha = 1.0
+                    card.starOne.alpha = 1.0
+                    card.starTwo.alpha = 1.0
+                    card.starThree.alpha = 1.0
+                    card.starFour.alpha = 1.0
+                    card.starFive.alpha = 1.0
+                    card.starSix.alpha = 1.0
+                    
+                    }, completion: { _ in
+                        
+                })
+                
+            } else {
+                // The Rest
+                UIView.animateWithDuration(0.4, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+                    card.frame.origin.y = 200
+                    }, completion: { _ in
+                        self.positionCards()
+                        
+                })
+            }
+        }
+
     }
     
 }
